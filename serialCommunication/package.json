@@ -1,0 +1,12 @@
+{
+  "name": "remote",
+  "version": "v0.0.1",
+  "scripts": {
+	"run": "node remote.js"
+	},
+  "dependencies": {
+    "iohook": "^0.6.6",
+    "serialport": "^9.2.1",
+    "ws": "^8.2.2"
+  }
+}

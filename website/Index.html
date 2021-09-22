@@ -1,0 +1,38 @@
+<head>
+<style>
+
+
+#controller {
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.column {
+  float: left;
+}
+.leftcolumn {
+	width: 75%;
+	height: 100%;
+}
+.rightcolumn {
+	width: 25%;
+}
+
+</style>
+
+
+</head>
+<body>
+	<script src="./gamepad.js"></script>
+	<div class="column leftcolumn">
+		<canvas id="controller" width="100%"></canvas>
+	</div>
+	<div class="column rightcolumn">
+		<span id="connecting">host: <input type="text" id="host" name="host" value="ws://localhost:8080" required><input type="button" id="connect" value="connect" name="connect" onclick="connect();" required></span>
+		<span id="ping"></span>
+	</div>
+	
+	
+
+
+</body>
