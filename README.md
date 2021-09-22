@@ -4,6 +4,7 @@ This project allows you to emulate a PS3 controller remotely, using two raspberr
 
 ## Requirements
 2 raspberry pi picos
+
 1 PS3
 
 ## Hardware
