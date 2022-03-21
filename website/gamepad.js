@@ -135,7 +135,7 @@ function connect(){
 	socket.binaryType = "arraybuffer";
 
 
-
+	
 	socket.addEventListener('open', function (event) {
 	    setInterval(ping,1000);
 	});
@@ -148,7 +148,9 @@ function connect(){
 	});
 
 	function ping(){
-		socket.send(JSON.stringify({"data":"ping","timestamp":Date.now()}));
+		if(socket.readyState == 1){	
+			socket.send(JSON.stringify({"data":"ping","timestamp":Date.now()}));
+		}
 	}
 	connected = true;
 }
@@ -228,7 +230,7 @@ function gameLoop(){
 		}
 		
 	}
-	if(connected){
+	if(connected && socket.readyState == 1){
 		if(deltaTime > minTime){
 				socket.send(new Uint8Array(buffer));
 			deltaTime = 0;
