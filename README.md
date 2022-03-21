@@ -23,9 +23,27 @@ The program is quite convoluted, there are alot of improvements possible, among 
   
   a PS3
   
-  a PC
-
+  a PC (CMAKE, RPI-PICO SDK configured)
 ## Circuit Diagram
 
 ![ps3Controller](https://user-images.githubusercontent.com/37073789/159308536-d062687e-74a6-4c4a-88d9-efc8ea53083f.svg)
 
+## Build
+
+1. Create a new folder ```./build```
+2. Run ```cmake ..``` inside the build folder
+3. Run ```make``` to build uf2 files
+4. The files will be compiled inside ```./build/picoCode/``` there will be two folders device and host in each one there will be the uf2 files
+
+## Run
+
+1. Connect the Host Pico to the PC and the Device Pico to the PS3
+2. Run ```node serialCommunication/remote.js``` to host the websocket Server
+3. Provide the remote player with the website folder or host it in a http server
+4. Remote user connects to websocket replacing ```ws://localhost:8080``` with ```ws://<hostIp>:<Port>```
+
+## Credits
+
+Thanks for the previous research in the following posts:
+
+![spi_master_slave](https://github.com/michaelstoops/pico-examples/tree/spi_master_slave/spi/spi_master_slave)
