@@ -26,3 +26,6 @@ The program is quite convoluted, there are alot of improvements possible, among 
   a PC
 
 ## Circuit Diagram
+
+![ps3Controller](https://user-images.githubusercontent.com/37073789/159308536-d062687e-74a6-4c4a-88d9-efc8ea53083f.svg)
+
